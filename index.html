@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Background from: http://flickr.com/photos/huangjiahui/2902184674/sizes/l/ -->
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -7,25 +8,23 @@
 <style type="text/css" media="all">
     html {
         min-height: 100%;
-        height: 100%;
     }
 
     body {
         padding: 1.5em;
         margin: 0;
-        background: #000000;
+        background: #FFFFEE;
         text-align: center;
-        font-family: Tahoma;
+        font-family: Helvetica, Arial, sans-serif;
         font-size: 0.9em;
     }
 
     #outer-wrapper {
         margin: 0 auto;
         text-align: left;
-        width: 650px;
+        width: 750px;
         background: #EEE;
         border: 3px solid #DDD;
-        min-width: 550px;
         color: #444;
     }
 
@@ -35,34 +34,37 @@
         font-weight: normal;
     }
 
-    #logo h3 {
-        color: #EEE;
-        margin-left: 1em;
-    }
-
     #logo, #footer {
-        background: #000000;
         color: #FFF;
         padding: 1em;
-        font-family: "Times New Roman";
         font-size: 1.1em;
+        border: 0 solid #DDD;
+    }
+    
+    #header {
+        background: url(background.png) top left no-repeat;
         border: 0 solid #DDD;
         border-width: 0 0 3px 0;
     }
 
-    #logo {
+    #logo h1 a {
+        display: block;
+        text-indent: -9999px;
+        overflow: hidden;
+        background: url(logo.png) top left no-repeat;
         height: 70px;
     }
-
-    #logo img {
-        border: 0px;
-    } 
+    #logo h1 a:hover {
+        background-image: url(logo-i.png);
+    }
 
     #logo .contact-info {
         float: right;
     }
 
     #footer {
+        background: #FFF;
+        color: #333;
         margin: 0;
         font-family: inherit;
         font-size: 0.8em;
@@ -72,8 +74,7 @@
 
     #nav { 
         padding: 0.5em;
-        background: #7491bb;
-        text-align: center;
+        text-align: left;
     }
 
     #nav ul, #nav li {
@@ -87,18 +88,29 @@
         display: inline;
     }
 
-    a {
-        color: #ffffff;
-    }
-
     #nav a {
-        color: #ffffff;
+        background: #000;
+        color: #FFF;
         text-decoration: none;
-        padding: 0.5em;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        display: block; 
+        margin: 0.2em 0.2em 0.2em 0.8em; 
+        text-transform: uppercase;
+        font-weight: bold;
+        float: left;
+        letter-spacing: -1px;
     }
-
+    #nav a.support, #nav a.support-first {
+        font-weight: normal;
+    }
+    #nav a.support-first {
+        margin-left: 2em;
+    }
+    
     #nav a:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        color: #333;
+        background: #FFF;
     }
 
     #inner-wrapper {
@@ -117,51 +129,75 @@
     #main {
         clear: left;
     }
+    .lq, .rq {
+        display: none;
+        font-family: "Georgia", "Times New Roman";
+        font-size: 2em;
+        position: relative;
+        top: 0.2em;
+    }
+    .lq {
+        left: -0.2em;
+    }
+    .rq {
+        left: 0.2em;
+    }
+    .clear {
+        clear: both;
+    }
 </style>
 
 </head>
 <body>
 
 <div id="outer-wrapper">
-  <div id="logo">
-    <div class="contact-info">
-      <a href="mailto:support@appsbynick.com">Email Support</a><br />
-      <a href="mailto:feedback@appsbynick.com">Send Feedback</a>
+  <div id="header">
+    <div id="logo">
+      <h1><a href="#">Apps By Nick</a></h1>
     </div>
-    <a href="#">
-      <img src="logo.gif" height="70" />
-    </a>
-  </div>
 
-  <div id="nav">
-    <ul>
-      <li class="first"><a href="#">All Applications</a></li>
-      <li><a href="#">Clax</a></li>
-      <li><a href="#">BCD Clock</a></li>
-    </ul>
+    <div id="nav">
+      <ul>
+        <li class="first"><a id="a-clax" href="#clax">Clax</a></li>
+        <li><a id="a-bcdclock" href="#bcdblock">BCD Clock</a></li>
+        <li><a class="support-first" href="mailto:support@appsbynick.com">Email Support</a></li>
+        <li><a class="support" href="mailto:feedback@appsbynick.com">Send Feedback</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
   </div>
 
   <div id="main">
     <div id="inner-wrapper">
       <div id="content">
 
-<p class="first">
+<h2>Apps By Nick</h2>
+<p>
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla ut nisi. Duis quis quam. Fusce at pede. Aenean eu lorem et odio posuere malesuada. Nullam fermentum pellentesque mi. Morbi erat augue, ornare nec, condimentum eget, auctor porttitor, mi. Maecenas non urna in quam egestas posuere. Vestibulum ornare justo id leo. Etiam rutrum. Pellentesque faucibus venenatis felis. In accumsan fringilla neque. Integer feugiat nunc eu turpis.
 </p>
 
+<h2 id="clax">Clax</h2>
 <p>
 In libero nunc, porttitor et, gravida sed, tincidunt ut, lacus. Cras ac tellus. Ut in sem a augue ultricies fermentum. Aenean ac nulla. Suspendisse pellentesque justo sed orci. Quisque pharetra, dolor nec mollis sodales, sapien urna vehicula mauris, quis interdum est turpis at lacus. Sed condimentum vulputate massa. Morbi accumsan interdum leo. Sed vitae risus. In mattis. Aliquam posuere. Nam pellentesque lobortis nisl. Vivamus sem odio, suscipit nec, porta ut, semper id, erat. Maecenas bibendum nisl eget lorem. Aliquam nisi ligula, vestibulum in, scelerisque non, mattis at, dolor. Donec a leo id nunc malesuada mattis. Maecenas vehicula ante in mauris. Fusce vel nisi sit amet justo nonummy tempor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 </p>
+
+<h2 id="bcdclock">BCD Clock</h2>
 <p>
 Ut eget mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ultricies, orci eleifend convallis ultricies, enim nisl luctus purus, in posuere nulla neque nec nisl. Curabitur egestas ullamcorper leo. Curabitur ultricies. Aliquam volutpat, libero nec eleifend feugiat, sapien tellus blandit metus, sed auctor nunc ligula consectetuer tortor. Cras eget sapien. Integer pede metus, tincidunt et, tincidunt sit amet, sollicitudin in, elit. Suspendisse potenti. Vivamus rhoncus risus nec sapien. Vivamus magna est, porttitor a, ornare ut, tempus et, pede. Nunc magna. Fusce justo turpis, aliquam id, ullamcorper et, feugiat sed, magna. Nulla et lectus sit amet nibh dapibus condimentum. Nulla hendrerit, justo tempor mollis aliquet, neque massa rhoncus orci, eget varius ipsum neque ac tortor. Etiam erat ipsum, luctus eu, elementum eget, iaculis nec, eros. Duis metus. Nam elementum consectetuer nisi.
 </p>
+
+<h2>Support</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla ut nisi. Duis quis quam. Fusce at pede. Aenean eu lorem et odio posuere malesuada. Nullam fermentum pellentesque mi. Morbi erat augue, ornare nec, condimentum eget, auctor porttitor, mi. Maecenas non urna in quam egestas posuere. Vestibulum ornare justo id leo. Etiam rutrum. Pellentesque faucibus venenatis felis. In accumsan fringilla neque. Integer feugiat nunc eu turpis.
+</p>
+
 
       </div>
     </div>
   </div>
 
   <div id="footer">
-    Copyright &copy; Nicholas Wright. All Rights Reserved.
+    &#8220;Nick&#8221; is <a href="http://nicholaswright.com/">Nicholas Wright</a>. &copy; 2009
   </div>
 </div>
 </body>
