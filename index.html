@@ -129,7 +129,9 @@
     }
 
     #inner-wrapper p {
-        padding: 0; margin: 1.5em 0;
+        padding: 0; 
+        margin: 1.5em 0;
+        font-size: 0.9em;
     }
 
     #inner-wrapper p.first {
@@ -137,13 +139,25 @@
     }
 
     a {
-        color: #000;
+        color: #333;
+        background: #FFF;
         text-transform: uppercase;
+        font-size: 0.9em;
         font-weight: bold;
-    } 
+        padding: 0.4em 0.2em 0.2em;
+        letter-spacing: -1px;
+        text-decoration: none;
+    }
+    #main a {
+        border-bottom: 1px solid #333;
+    }
 
     a:hover {
-        text-decoration: none;
+        color: #666;
+        background: #FFF;
+    }
+    #main a:hover {
+        border-bottom: 1px solid #666;
     }
 
     .dashboard-icon {
@@ -154,9 +168,21 @@
 
     .screenshot {
         float: left;
+        padding: 0.5em; 
+        border: 1px solid #CCC;
+        background: #FFF;
         height: 200px;
         width: 133px;
         margin: 0 10px;
+    }
+    
+    .free {
+        color: #777;
+        padding: 0.2em; 
+        background: #FFFFAA;
+    }
+    h2 .free {
+        margin-left: 1em;
     }
 </style>
 
@@ -186,24 +212,23 @@
 
 <h2 class="first">Apps By Nick</h2>
 <p class="c">
-Howdy! I'm your host, Nick. As you may have guessed, I write apps. Feel free to peruse some of my current applications below. If you see anything that piques your curiosity, you can click the "Purchase From App Store" link to purchase the application.
+Why, hello there! I'm your host, Nick. As you may have guessed, I write apps. Feel free to peruse some of my current applications below. If you see anything that piques your curiosity, you can click the "Purchase From App Store" link to purchase the application.
 </p>
 
 <p class="c">
-Each of these products were painstakingly tested for quality by my wife and 5 children.
+Each of these products were painstakingly tested for quality by my wife and five children.
 </p>
 
 <p class="c">
-If you already own one of these applications, I'd appreciate your feedback. I'm always interested in improving the quality of my products, and the easiest route to improvement is through the feedback of my customers.
+If you already own one of these applications, I'd appreciate your <a href="#feedback">feedback</a>. I'm always interested in improving the quality of my products, and the easiest route to improvement is through feedback from the users.
 </p>
 
 <p class="c">
 Thanks for visiting, and I hope you enjoy my products.
 </p>
 
-<a name="clax"></a>
-<h2 id="clax"><img src="clax_small_icon.gif" class="dashboard-icon" /> Clax</h2>
-<img src="clax.png" class="screenshot" />
+<h2 id="clax"><img src="clax_small_icon.gif" alt="Clax Icon" class="dashboard-icon" /> Clax</h2>
+<img src="clax.png" class="screenshot" alt="Clax Screenshot" />
 <p class="c">
 Clax is a strategy puzzle game in which you remove groups of colored balls in a way that ultimately allows you to clear the board of all every ball.
 </p>
@@ -213,17 +238,16 @@ Clax has 6 difficulties, 2 ball sizes and a system to track and view your high s
 </p>
 
 <p class="c">
-Be cautioned, this game is extremely addicting. Like, addictive as crack, but at a fraction of the cost. I'm sure my wife has logged more hours playing this game than she has driving our car.
+Be cautioned, this game is extremely addicting. Like, addictive as <em>crack</em>, but at a fraction of the cost. I'm sure my wife has logged more hours playing this game than she has driving our car!
 </p>
 
 <p class="c" style="clear: both">
 <br />
-<a href=".">Purchase from App Store</a> for only <strong>99&cent;</strong>
+<a href=".">Purchase Clax from App Store</a> for only <strong>99&cent;</strong>
 </p>
 
-<a name="bcdclock"></a>
-<h2 id="bcdclock"><img src="bcd_clock_small_icon.gif" class="dashboard-icon" /> BCD Clock</h2>
-<img src="bcd_clock.png" class="screenshot" />
+<h2 id="bcdclock"><img src="bcd_clock_small_icon.gif" class="dashboard-icon" alt="BCD Clock Icon" /> BCD Clock <span class="free">Free!</span></h2>
+<img src="bcd_clock.png" class="screenshot" alt="BCD Clock Screenshot" />
 <p class="c">
 Whether you want to impress your alpha friends or just confuse all of your normal buddies, a binary clock is a sure fire way to achieve your goal.
 </p>
@@ -237,17 +261,16 @@ Also worth noting is that the methodic ticking and color changing has the abilit
 </p>
 
 <p class="c" style="clear: both">
-<a href=".">Purchase from App Store</a> for the low low price of <strong>NOTHING</strong>
+<br />
+<a href=".">Purchase BCD Clock from App Store</a> for the low, low price of <span class="free"><strong>NOTHING</strong>, it's free!</span>
 </p>
 
-<a name="support"></a>
-<h2>Support</h2>
+<h2 id="support">Support</h2>
 <p class="c">
 Having trouble with one of my products? <a href="mailto:support@appsbynick.com?subject=HELP WITH THINGS">Email support</a>
 </p>
 
-<a name="feedback"></a>
-<p class="c">
+<p id="feedback" class="c">
 Just want to offer some (hopefully constructive) input? <a href="mailto:feedback@appsbynick.com?subject=I HAVE FEEDBACK">Email feedback</a>
 </p>
 
@@ -260,5 +283,4 @@ Just want to offer some (hopefully constructive) input? <a href="mailto:feedback
   </div>
 </div>
 </body>
-
 </html>
